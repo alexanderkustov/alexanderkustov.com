@@ -56,6 +56,37 @@ body {
     color: #222222;
 }
 
+a{
+    text-decoration: none;
+    color:#222;
+}
+a:hover{
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color:tomato;
+}
+
+   .imgb{
+        transition: all 0.5s ease;
+        -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          -ms-filter: grayscale(100%);
+          -o-filter: grayscale(100%);
+          filter: grayscale(100%);
+          filter: url(grayscale.svg); /* Firefox 4+ */
+          filter: gray; /* IE 6-9 */
+          padding-bottom:15px;
+          
+    }
+    .imgb:hover{
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+        filter: grayscale(0%);
+        filter: url(grayscale.svg); /* Firefox 4+ */ 
+    }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -104,40 +135,17 @@ body {
     margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #222;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
+.freight{
+    @include use-registered-font('FreigTexProBook');
+}
+
+.pad{
+    padding-top:15px;
+    padding-bottom:15px;
 }
 
 .heroslide{
-    padding: 15px;
-    
-
-    img{
-        transition: all 0.5s ease;
-        -webkit-filter: grayscale(100%);
-          -moz-filter: grayscale(100%);
-          -ms-filter: grayscale(100%);
-          -o-filter: grayscale(100%);
-          filter: grayscale(100%);
-          filter: url(grayscale.svg); /* Firefox 4+ */
-          filter: gray; /* IE 6-9 */
-          padding-bottom:15px;
-          border-bottom: 1px solid #222;
-    }
-    img:hover{
-        -webkit-filter: grayscale(0%);
-        -moz-filter: grayscale(0%);
-        -ms-filter: grayscale(0%);
-        -o-filter: grayscale(0%);
-        filter: grayscale(0%);
-        filter: url(grayscale.svg); /* Firefox 4+ */ 
-    }
+   padding-top:15px;
 }
 
 /* Supporting marketing content */
@@ -153,6 +161,18 @@ body {
     }
 }
 .vertline{border-left:1px solid #222;}
+
+.btnBorder{
+    padding:10px;
+    border: 2px solid #222;
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.btnBorder:hover{
+    border: 2px solid tomato;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
