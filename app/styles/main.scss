@@ -3,7 +3,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 $font_dir: '../fonts/';
  
-/* _simple-font-url('Chunkfive', 'eot'); */
 @function _simple-font-url($name, $extension)
 {
     @return url($font_dir + $name + '.' + $extension);
@@ -35,7 +34,7 @@ $font_dir: '../fonts/';
     letter-spacing: 0;
 }
 
-@include register-font('FreigTexProBook');
+@include register-font('FreightDisplayMedium');
 
 .browsehappy {
     margin: 0.2em 0;
@@ -66,8 +65,13 @@ a:hover{
     color:tomato;
 }
 
-   .imgb{
-        transition: all 0.5s ease;
+.row {
+margin-left: 0px;
+margin-right: 0px;
+}
+
+.imgb{  
+    transition: all 0.5s ease;
         -webkit-filter: grayscale(100%);
           -moz-filter: grayscale(100%);
           -ms-filter: grayscale(100%);
@@ -76,9 +80,8 @@ a:hover{
           filter: url(grayscale.svg); /* Firefox 4+ */
           filter: gray; /* IE 6-9 */
           padding-bottom:15px;
-          
-    }
-    .imgb:hover{
+      }
+.imgb:hover{
         -webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
         -ms-filter: grayscale(0%);
@@ -87,20 +90,17 @@ a:hover{
         filter: url(grayscale.svg); /* Firefox 4+ */ 
     }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-
+.btop{
+        border-top: 1px solid #222;
+}
+.bbot{
+        border-bottom: 1px solid #222;
 }
 
-/* Custom page header */
+
 .header {
     border-top: 1px solid #222;
     padding-top: 15px;
-    
 
     /* Make the masthead heading the same height as the navigation */
     h3 {
@@ -108,7 +108,7 @@ a:hover{
         margin-bottom: 0;
         line-height: 40px;
         padding-top: 5px;
-        @include use-registered-font('FreigTexProBook');
+        @include use-registered-font('FreightDisplayMedium');
         font-size: 48px;
     }
     h5{
@@ -124,19 +124,14 @@ a:hover{
 
 /* Custom page footer */
 .footer {
-    padding-top: 19px;
+    padding-top: 20px;
     color: #777;
     border-top: 1px solid #222;
-     text-align: center;
-    text-transform: uppercase;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
+    
 }
 
 .freight{
-    @include use-registered-font('FreigTexProBook');
+    @include use-registered-font('FreightDisplayMedium');
 }
 
 .pad{
@@ -149,8 +144,7 @@ a:hover{
 }
 
 /* Supporting marketing content */
-.marketing {
-    margin: 40px 0 0 0;
+.marketing {   
     padding-top: 5px;
     padding-bottom: 5px;
     border-top: 3px solid #222;
@@ -180,13 +174,7 @@ a:hover{
         max-width: 1004px;
     }
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
+    
 
     /* Space out the masthead */
     .header {
