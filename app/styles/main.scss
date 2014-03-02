@@ -1,0 +1,185 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+@import 'sass-bootstrap/lib/bootstrap';
+
+$font_dir: '../fonts/';
+ 
+/* _simple-font-url('Chunkfive', 'eot'); */
+@function _simple-font-url($name, $extension)
+{
+    @return url($font_dir + $name + '.' + $extension);
+}
+ 
+/* _full-font-url('Chunkfive', 'woff', 'embedded-opentype', '?#iefix'); */
+@function _full-font-url($name, $extension, $format, $hash: '')
+{
+    @return url($font_dir + $name + '.' + $extension + $hash) format($format);
+}
+ 
+@mixin register-font($name)
+{
+    @font-face {
+        font-family: $name;
+        font-style: normal;
+        font-weight: normal;
+        src: _simple-font-url($name, 'eot');
+        src: _full-font-url($name, 'woff', 'embedded-opentype', '?#iefix'),
+             _full-font-url($name, 'ttf', 'truetype'),
+             _full-font-url($name, 'svg', 'esvg', '?#' + $name);
+    }
+}
+ 
+@mixin use-registered-font($name)
+{
+    font-family: $name;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
+@include register-font('FreigTexProBook');
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #222;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Georgia', 'Times New Roman', 'serif';
+    font-size: 12px;
+    line-height: 19px;
+    font-weight: normal;
+    font-style: normal;
+    color: #222222;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* Custom page header */
+.header {
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    
+
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-top: 5px;
+        @include use-registered-font('FreigTexProBook');
+        font-size: 48px;
+    }
+    h5{
+        font-weight: 100;
+    }
+}
+
+ h5{
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #222;
+     text-align: center;
+    text-transform: uppercase;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #222;
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+}
+
+.heroslide{
+    padding: 15px;
+    
+
+    img{
+        transition: all 0.5s ease;
+        -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          -ms-filter: grayscale(100%);
+          -o-filter: grayscale(100%);
+          filter: grayscale(100%);
+          filter: url(grayscale.svg); /* Firefox 4+ */
+          filter: gray; /* IE 6-9 */
+          padding-bottom:15px;
+          border-bottom: 1px solid #222;
+    }
+    img:hover{
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+        filter: grayscale(0%);
+        filter: url(grayscale.svg); /* Firefox 4+ */ 
+    }
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0 0 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 3px solid #222;
+    border-bottom: 3px solid #222;
+    
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+.vertline{border-left:1px solid #222;}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1004px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+        .logo{
+            height:auto;
+            width:64px;
+        }
+    }
+    
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
