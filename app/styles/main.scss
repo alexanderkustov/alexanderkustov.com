@@ -32,6 +32,8 @@ $font_dir: '../fonts/';
     font-family: $name;
     font-weight: normal;
     letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @include register-font('FreightDisplayMedium');
