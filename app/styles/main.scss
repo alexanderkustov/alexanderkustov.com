@@ -97,10 +97,19 @@ margin-right: 0px;
         border-bottom: 1px solid #222;
 }
 
+#projects{
+    text-align: center;
+    h4{
+                @include use-registered-font('FreightDisplayMedium');
+                line-height: 8px;
+                font-size: 20px;
+    }
+}
 
 .header {
     border-top: 1px solid #222;
     padding-top: 15px;
+    text-align:center;
 
     /* Make the masthead heading the same height as the navigation */
     h3 {
@@ -173,9 +182,6 @@ margin-right: 0px;
     .container {
         max-width: 1004px;
     }
-
-    
-
     /* Space out the masthead */
     .header {
         text-align: center;
@@ -184,10 +190,5 @@ margin-right: 0px;
             height:auto;
             width:64px;
         }
-    }
-    
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
     }
 }
