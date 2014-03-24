@@ -12,6 +12,7 @@ function recentWork(){
 function resume(){
 	"use strict";
 	$('#quote').slideDown('slow');
+	$('#story').slideDown('slow');
 	$('#main').slideUp('slow');
 	$('#projects').slideUp('slow');
     $('#work').slideUp('slow');
@@ -38,3 +39,5 @@ function showAll(){
 	$('#friends').slideDown('slow');
     $('#friends-logos').slideDown('slow');
 }
+
+$('#story').hide();

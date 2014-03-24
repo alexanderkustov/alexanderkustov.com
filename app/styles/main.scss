@@ -103,7 +103,7 @@ margin-right: 0px;
     text-align: center;
     h4{
                 @include use-registered-font('FreightDisplayMedium');
-                line-height: 8px;
+                line-height: 1em;
                 font-size: 20px;
     }
 }
