@@ -1,30 +1,40 @@
 function recentWork(){
 	"use strict";
-    $('#main').hide('slow');
-    $('#quote').hide('slow');
-    $('#friends').hide('slow');
-    $('#friends-logos').hide('slow');
-    $('#projects').show('slow');
-    $('#work').show('slow');
+    $('#main').slideUp('slow');
+    $('#quote').slideUp('slow');
+    $('#friends').slideUp('slow');
+    $('#friends-logos').slideUp('slow');
+    $('#projects').slideDown('slow');
+    $('#work').slideDown('slow');
 
 }
 
 function resume(){
 	"use strict";
-	$('#quote').show('slow');
-	$('#main').hide('slow');
-	$('#projects').hide('slow');
-    $('#work').hide('slow');
-	$('#friends').hide('slow');
-    $('#friends-logos').hide('slow');
+	$('#quote').slideDown('slow');
+	$('#main').slideUp('slow');
+	$('#projects').slideUp('slow');
+    $('#work').slideUp('slow');
+	$('#friends').slideUp('slow');
+    $('#friends-logos').slideUp('slow');
 }
 
 function contact(){
 	"use strict";
-	$('#quote').show('slow');
-	$('#main').hide('slow');
-	$('#projects').hide('slow');
-    $('#work').hide('slow');
-	$('#friends').hide('slow');
-    $('#friends-logos').hide('slow');
+	$('#quote').slideDown('slow');
+	$('#main').slideUp('slow');
+	$('#projects').slideUp('slow');
+    $('#work').slideUp('slow');
+	$('#friends').slideUp('slow');
+    $('#friends-logos').slideUp('slow');
+}
+
+function showAll(){
+	"use strict";
+	$('#quote').slideDown('slow');
+	$('#main').slideDown('slow');
+	$('#projects').slideDown('slow');
+    $('#work').slideDown('slow');
+	$('#friends').slideDown('slow');
+    $('#friends-logos').slideDown('slow');
 }
