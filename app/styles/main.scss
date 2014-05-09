@@ -72,6 +72,12 @@ margin-left: 0px;
 margin-right: 0px;
 }
 
+.main-story{
+    a{
+        color:tomato;
+    }
+}
+
 .imgb{  
     transition: all 0.5s ease;
         -webkit-filter: grayscale(100%);
@@ -99,7 +105,7 @@ margin-right: 0px;
         border-bottom: 1px solid #222;
 }
 
-#projects{
+.projects{
     text-align: center;
     h4{
                 @include use-registered-font('FreightDisplayMedium');
