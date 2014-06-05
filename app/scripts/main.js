@@ -1,18 +1,18 @@
 function recentWork(){
-	"use strict";
+	'use strict';
     $('#main').slideUp('slow');
     $('#quote').slideUp('slow');
     $('#friends').slideUp('slow');
     $('#friends-logos').slideUp('slow');
     $('#projects').slideDown('slow');
     $('#projects2').slideDown('slow');
+    $('#story').slideUp('slow');
     
     $('#work').slideDown('slow');
-
 }
 
 function moreWork(){
-	"use strict";
+	'use strict';
  
     $('#projects').slideDown('slow');
     $('#projects2').slideDown('slow');
@@ -22,9 +22,10 @@ function moreWork(){
 }
 
 function resume(){
-	"use strict";
-	$('#quote').slideDown('slow');
+	'use strict';
 	$('#story').slideDown('slow');
+	$('#quote').slideUp('slow');
+	
 	$('#main').slideUp('slow');
 	$('#projects').slideUp('slow');
 	$('#projects2').slideUp('slow');
@@ -35,8 +36,9 @@ function resume(){
 }
 
 function contact(){
-	"use strict";
+	'use strict';
 	$('#quote').slideDown('slow');
+	$('#story').slideUp('slow');
 	$('#main').slideUp('slow');
 	$('#projects').slideUp('slow');
 	$('#projects2').slideUp('slow');
@@ -46,11 +48,13 @@ function contact(){
 }
 
 function showAll(){
-	"use strict";
+	'use strict';
 	$('#quote').slideDown('slow');
+
 	$('#main').slideDown('slow');
 	$('#projects').slideDown('slow');
 	$('#projects').slideUp('slow');
+	$('#story').slideUp('slow');
 
     $('#work').slideDown('slow');
 	$('#friends').slideDown('slow');
